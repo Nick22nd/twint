@@ -113,3 +113,6 @@ ENV/
 *.txt
 
 test_twint.py
+
+## ide
+.idea

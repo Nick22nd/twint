@@ -157,7 +157,7 @@ def ForceNewTorIdentity(config):
 
 async def Request(_url, connector=None, params=None, headers=None):
     logme.debug(__name__ + ':Request:Connector')
-    async with aiohttp.ClientSession(connector=connector, headers=headers) as session:
+    async with aiohttp.ClientSession(connector=connector, headers=headers, trust_env=True) as session:
         return await Response(session, _url, params)
 
 
